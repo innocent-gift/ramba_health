@@ -51,12 +51,12 @@
 
     /* ── HEADER ── */
     .site-header {
-      background: var(--white);
-      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, var(--ink) 0%, #0a3a52 60%, var(--teal-deep) 100%);
+      border-bottom: 3px solid var(--teal);
       position: sticky;
       top: 0;
       z-index: 200;
-      box-shadow: 0 1px 12px rgba(10,116,144,.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,.25);
     }
     .header-inner {
       display: flex;
@@ -74,31 +74,29 @@
       text-decoration: none;
       flex-shrink: 0;
     }
-    .logo-area:hover { opacity: .88; }
+    .logo-area:hover { opacity: .85; }
     .logo-img {
-      width: 54px;
-      height: 54px;
-      border-radius: 12px;
+      height: 52px;
+      width: auto;
+      max-width: 160px;
       object-fit: contain;
-      object-position: center;
-      background: var(--white);
-      border: 1.5px solid var(--line);
-      box-shadow: 0 2px 8px rgba(10,116,144,.12);
+      object-position: left center;
       flex-shrink: 0;
       display: block;
+      filter: brightness(0) invert(1);
     }
     .logo-copy { display: flex; flex-direction: column; }
     .logo-name {
       font-family: 'DM Serif Display', serif;
       font-size: 1.35rem;
-      color: var(--ink);
+      color: var(--white);
       line-height: 1.15;
       letter-spacing: -.2px;
     }
     .logo-tagline {
       font-size: .7rem;
       font-weight: 600;
-      color: var(--teal);
+      color: #7dd3ea;
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-top: 1px;
@@ -110,24 +108,25 @@
       background: none; border: none;
       font-family: 'DM Sans', sans-serif;
       font-size: .9rem; font-weight: 600;
-      color: var(--ink-soft);
+      color: rgba(255,255,255,.75);
       padding: .5rem 1rem;
       border-radius: var(--radius-sm);
       cursor: pointer;
       transition: var(--transition);
       white-space: nowrap;
     }
-    .nav-btn:hover { color: var(--teal); background: var(--teal-pale); }
-    .nav-btn.active { color: var(--teal); background: var(--teal-light); }
+    .nav-btn:hover { color: var(--white); background: rgba(255,255,255,.12); }
+    .nav-btn.active { color: var(--white); background: rgba(255,255,255,.18); }
     .nav-btn-donate {
-      background: var(--teal);
-      color: var(--white) !important;
+      background: var(--gold);
+      color: var(--ink) !important;
       border-radius: 40px;
       padding: .5rem 1.2rem;
-      box-shadow: 0 3px 10px rgba(10,116,144,.3);
+      box-shadow: 0 3px 10px rgba(232,168,32,.4);
+      font-weight: 700;
     }
-    .nav-btn-donate:hover { background: var(--teal-deep) !important; color: var(--white) !important; transform: translateY(-1px); box-shadow: 0 5px 14px rgba(10,116,144,.4); }
-    .nav-btn-donate.active { background: var(--teal-deep) !important; color: var(--white) !important; }
+    .nav-btn-donate:hover { background: #d4961a !important; color: var(--ink) !important; transform: translateY(-1px); box-shadow: 0 5px 14px rgba(232,168,32,.5); }
+    .nav-btn-donate.active { background: #d4961a !important; color: var(--ink) !important; }
 
     /* ── PAGES ── */
     .page-container { padding: 3rem 0 5rem; }
