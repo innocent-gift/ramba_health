@@ -50,7 +50,7 @@
     /* ── LAYOUT ── */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-    /* ── HEADER ── */
+    /* ── HEADER (improved sticky) ── */
     .site-header {
       background: linear-gradient(135deg, var(--ink) 0%, #0a3a52 60%, var(--teal-deep) 100%);
       border-bottom: 3px solid var(--teal);
@@ -63,59 +63,60 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 0;
+      padding: 1.2rem 0;
       gap: 1.5rem;
     }
 
-    /* LOGO AREA — circular image refinements */
+    /* LOGO AREA — enlarged & polished for maximum visibility */
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 1rem;
       text-decoration: none;
       flex-shrink: 0;
+      transition: transform 0.2s ease;
     }
-    .logo-area:hover { opacity: .85; }
+    .logo-area:hover { transform: scale(1.02); opacity: 1; }
     
-    /* 🔵 CIRCULAR LOGO STYLES: make the brand icon perfectly round */
+    /* 🔵 ENHANCED LOGO: bigger, prominent, refined shape */
     .logo-img {
-      width: 48px;
-      height: 48px;
-      min-width: 48px;
-      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      max-width: 150px;
       object-fit: cover;
-      background: var(--white);
-      padding: 0;
-      margin: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      border: 2px solid rgba(255,255,255,0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s;
+      flex-shrink: 0;
       display: block;
+      background: var(--white);
+      border-radius: 50%;
+      padding: 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,.25);
+      border: 3px solid rgba(255,255,255,.4);
     }
     .logo-img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+      border-color: var(--gold);
     }
     
     .logo-copy { display: flex; flex-direction: column; }
     .logo-name {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.35rem;
+      font-size: 1.55rem;
       color: var(--white);
-      line-height: 1.15;
-      letter-spacing: -.2px;
+      line-height: 1.1;
+      letter-spacing: -0.2px;
+      font-weight: 500;
     }
     .logo-tagline {
-      font-size: .7rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      color: #7dd3ea;
+      color: #ffdd99;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-top: 1px;
+      margin-top: 4px;
     }
 
-    /* NAV */
-    nav { display: flex; gap: 0.25rem; align-items: center; }
+    /* NAVIGATION */
+    nav { display: flex; gap: 0.3rem; align-items: center; flex-wrap: wrap; }
     .nav-btn {
       background: none; border: none;
       font-family: 'DM Sans', sans-serif;
@@ -218,7 +219,24 @@
 
     .divider { height: 1px; background: var(--line); margin: 2.5rem 0; }
 
-    /* ── HOME PAGE ── */
+    /* alert banner (programs) - style fix for visibility */
+    .alert-banner {
+      background: var(--gold-light);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.5rem;
+      margin-top: 2rem;
+      border-left: 6px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .alert-banner i { font-size: 1.4rem; color: var(--gold); }
+
+    /* HOME */
     .hero {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -277,7 +295,7 @@
     .feature-card i { font-size: 1.8rem; color: var(--teal); margin-bottom: .75rem; }
     .feature-card p { font-size: .88rem; color: var(--ink-soft); line-height: 1.6; margin-top: .35rem; }
 
-    /* TEAM, PROGRAMS, CONTACT, DONATE — unchanged from original but keep consistency */
+    /* TEAM, PROGRAMS, CONTACT, DONATE */
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -339,18 +357,74 @@
       padding: 2rem;
       color: var(--white);
     }
+
+    /* ✨ FOOTER — COMPLETELY ENHANCED: better visibility, richer style, social glow */
     footer {
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,.06);
-      padding: 2rem 0;
+      background: #0a1c26;
+      border-top: 1px solid rgba(232,168,32,0.25);
+      padding: 2.5rem 0 1.8rem;
+      margin-top: 1rem;
     }
     .footer-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.2rem;
+      gap: 1.8rem;
     }
+    .footer-copy {
+      font-size: 0.9rem;
+      color: #b9d9e5;
+      letter-spacing: 0.2px;
+      font-weight: 450;
+    }
+    .footer-copy strong {
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .socials {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      color: #e2f0f5;
+      font-size: 1.3rem;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      backdrop-filter: blur(2px);
+    }
+    .socials a:hover {
+      background: var(--gold);
+      color: var(--ink);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(232,168,32,0.3);
+    }
+    /* extra footer micro detail */
+    .footer-note {
+      text-align: center;
+      margin-top: 1.8rem;
+      font-size: 0.7rem;
+      color: #6c8f9c;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-note span i {
+      margin-right: 6px;
+      font-size: 0.7rem;
+    }
+
     #toast {
       position: fixed;
       bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(80px);
@@ -368,17 +442,59 @@
       display: flex; align-items: center; gap: .75rem;
     }
     #toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    /* RESPONSIVE: logo scales gracefully, footer adjusts */
     @media (max-width: 800px) {
-      .header-inner { flex-direction: column; }
+      .header-inner { flex-direction: column; text-align: center; }
       nav { flex-wrap: wrap; justify-content: center; }
       .hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
+      .logo-img { height: 82px; padding: 6px 16px; }
+      .logo-name { font-size: 1.35rem; }
     }
     @media (max-width: 500px) {
       .container { padding: 0 1.2rem; }
-      .logo-img { width: 40px; height: 40px; min-width: 40px; }
-      .logo-name { font-size: 1.1rem; }
+      .logo-img { height: 70px; padding: 4px 12px; max-width: 220px; }
+      .logo-name { font-size: 1.2rem; }
+      .logo-tagline { font-size: 0.65rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .socials { justify-content: center; }
     }
+
+    /* form fields polish */
+    .form-field { margin-bottom: 1.25rem; }
+    .form-field label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: var(--ink); font-size: 0.85rem; }
+    .form-field input, .form-field textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      font-family: inherit;
+      background: var(--white);
+      transition: 0.2s;
+    }
+    .form-field input:focus, .form-field textarea:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(10,116,144,0.1);
+    }
+    .donate-amounts { margin: 1.2rem 0; }
+    .amt-btn {
+      background: var(--teal-pale);
+      padding: 0.8rem 0.2rem;
+      text-align: center;
+      border-radius: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid var(--line);
+    }
+    .amt-btn.selected { background: var(--teal); color: white; border-color: var(--teal); box-shadow: 0 4px 10px rgba(10,116,144,.3); }
+    .contact-row { display: flex; align-items: center; gap: 1rem; margin: 1rem 0; color: #eef4f8; }
+    .contact-row a { color: var(--gold); text-decoration: none; }
+    .stat-item { margin: 1.5rem 0; text-align: center; }
+    .stat-num { font-size: 2.4rem; font-weight: 700; font-family: 'DM Serif Display', serif; }
+    .values-row { display: flex; gap: 1rem; flex-wrap: wrap; }
   </style>
 </head>
 <body>
@@ -386,7 +502,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo-area">
-      <img src="logo.png" alt="Ramba Health Initiative — circular emblem" class="logo-img" id="brandLogo">
+      <img src="image.png" alt="Ramba Health Initiative — official emblem" class="logo-img" id="brandLogo">
       <div class="logo-copy">
         <span class="logo-name">Ramba Health Initiative</span>
         <span class="logo-tagline">Healthy Communities · Empowered Futures</span>
@@ -429,13 +545,13 @@
     </div>
   </div>
 
-  <!-- ABOUT (condensed, but preserved) -->
+  <!-- ABOUT -->
   <div id="page-about" class="page">
     <span class="pill"><i class="fas fa-leaf"></i> Our story</span>
     <h2>Rooted in compassion,<br>driven by impact.</h2>
     <div class="divider"></div>
-    <div class="about-grid" style="display:grid; grid-template-columns:3fr 2fr; gap:2rem;">
-      <div class="about-body"><p>Founded in 2018 as a grassroots response to limited healthcare access, Ramba Health Initiative was formally chartered under the <strong>Official Seal in 2026</strong> — a milestone marking a decade of growth and recognition. Today, we partner with local clinics, volunteer networks, and global health experts.</p><p>We believe health is a right, not a privilege. Through culturally sensitive programs, we've reached over 24,000 individuals with life-changing interventions — from maternal care to mental health awareness.</p><div class="values-row" style="display:flex; gap:1rem; margin-top:1rem;"><div class="value-chip" style="background:var(--teal-pale); padding:.85rem 1.2rem;"><i class="fas fa-hand-holding-heart"></i><div><strong>Empathy</strong><span>Patient-first approach</span></div></div></div></div>
+    <div style="display:grid; grid-template-columns:3fr 2fr; gap:2rem;">
+      <div><p>Founded in 2018 as a grassroots response to limited healthcare access, Ramba Health Initiative was formally chartered under the <strong>Official Seal in 2026</strong> — a milestone marking a decade of growth and recognition. Today, we partner with local clinics, volunteer networks, and global health experts.</p><p>We believe health is a right, not a privilege. Through culturally sensitive programs, we've reached over 24,000 individuals with life-changing interventions — from maternal care to mental health awareness.</p><div class="values-row" style="margin-top:1rem;"><div class="value-chip" style="background:var(--teal-pale); padding:.85rem 1.2rem; border-radius:1rem;"><i class="fas fa-hand-holding-heart"></i><div><strong>Empathy</strong><span>Patient-first approach</span></div></div></div></div>
       <div class="stat-panel" style="background:var(--ink); border-radius:var(--radius-lg); padding:2rem;"><div class="stat-item"><div class="stat-num" style="color:var(--gold);">2018</div><div class="stat-desc">Year founded</div></div><div class="stat-item"><div class="stat-num" style="color:var(--gold);">24k+</div><div class="stat-desc">Lives impacted</div></div></div>
     </div>
   </div>
@@ -445,7 +561,7 @@
     <span class="pill"><i class="fas fa-seedling"></i> What we deliver</span>
     <h2>Flagship programs &amp; initiatives</h2>
     <div class="programs-grid"><div class="prog-card"><div class="prog-icon"><i class="fas fa-baby-carriage"></i></div><h3>Mama & Child First</h3><p>Prenatal support, skilled birth attendance, and vaccination drives.</p></div><div class="prog-card"><div class="prog-icon"><i class="fas fa-brain"></i></div><h3>Mind & Soul Circles</h3><p>Community-based mental health first aid, breaking stigma.</p></div><div class="prog-card"><div class="prog-icon"><i class="fas fa-droplet"></i></div><h3>WASH Program</h3><p>Building wells, distributing hygiene kits, infection prevention.</p></div></div>
-    <div class="alert-banner"><i class="fas fa-calendar-star"></i><div><strong>Upcoming event:</strong> Free health camp — April 12, 2026 &nbsp;·&nbsp;<a href="#" id="learnMoreLink">Register interest →</a></div></div>
+    <div class="alert-banner"><i class="fas fa-calendar-star"></i><div><strong>Upcoming event:</strong> Free health camp — April 12, 2026 &nbsp;·&nbsp;<a href="#" id="learnMoreLink" style="color: var(--teal); font-weight: 600;">Register interest →</a></div></div>
   </div>
 
   <!-- TEAM -->
@@ -459,7 +575,7 @@
   <div id="page-contact" class="page">
     <span class="pill"><i class="fas fa-envelope-open-text"></i> Reach out</span>
     <h2>Let's collaborate & create healthier tomorrows.</h2>
-    <div class="contact-grid" style="display:grid; grid-template-columns:3fr 2fr; gap:2rem;"><div class="contact-form-card"><h3><i class="fas fa-paper-plane" style="color:var(--teal);"></i> Send a message</h3><form id="contactForm"><div class="form-field"><label>Full name</label><input type="text" id="name" required></div><div class="form-field"><label>Email</label><input type="email" id="email" required></div><div class="form-field"><label>Message</label><textarea id="message" rows="3" required></textarea></div><button type="submit" class="btn btn-primary" style="width:100%;">Send message</button></form></div><div class="info-card"><h3>Connect directly</h3><div class="contact-row"><i class="fas fa-map-pin"></i><span>Nairobi, Kenya · East Africa hubs</span></div><div class="contact-row"><i class="fas fa-phone-alt"></i><span><a href="tel:+254700123456">+254 700 123 456</a></span></div><div class="contact-row"><i class="fas fa-envelope"></i><span><a href="mailto:hello@rambahealth.org">hello@rambahealth.org</a></span></div></div></div>
+    <div style="display:grid; grid-template-columns:3fr 2fr; gap:2rem;"><div class="contact-form-card"><h3><i class="fas fa-paper-plane" style="color:var(--teal);"></i> Send a message</h3><form id="contactForm"><div class="form-field"><label>Full name</label><input type="text" id="name" required></div><div class="form-field"><label>Email</label><input type="email" id="email" required></div><div class="form-field"><label>Message</label><textarea id="message" rows="3" required></textarea></div><button type="submit" class="btn btn-primary" style="width:100%;">Send message</button></form></div><div class="info-card"><h3>Connect directly</h3><div class="contact-row"><i class="fas fa-map-pin"></i><span>Nairobi, Kenya · East Africa hubs</span></div><div class="contact-row"><i class="fas fa-phone-alt"></i><span><a href="tel:+254700123456">+254 700 123 456</a></span></div><div class="contact-row"><i class="fas fa-envelope"></i><span><a href="mailto:hello@rambahealth.org">hello@rambahealth.org</a></span></div></div></div>
   </div>
 
   <!-- DONATE -->
@@ -469,12 +585,27 @@
   </div>
 </main>
 
-<footer><div class="container footer-inner"><div class="footer-copy">© 2026 <strong>Ramba Health Initiative</strong> — Official Seal · Bridging care with dignity</div><div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div></footer>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2026 <strong>Ramba Health Initiative</strong> — Official Seal · Bridging care with dignity</div>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span><i class="fas fa-heartbeat"></i> Empowering communities since 2018</span>
+      <span><i class="fas fa-hand-holding-heart"></i> 100% transparency</span>
+      <span><i class="fas fa-globe"></i> Registered NGO #RHI-2026</span>
+    </div>
+  </div>
+</footer>
 <div id="toast"><i class="fas fa-circle-check"></i> <span id="toast-msg"></span></div>
 
 <script>
 (function(){
-  // -------------------- 1. CIRCULAR LOGO (already via CSS) + circular favicon generation --------------------
   function showToast(msg) {
     const toastEl = document.getElementById('toast');
     if(!toastEl) return;
@@ -483,13 +614,12 @@
     setTimeout(() => toastEl.classList.remove('show'), 4000);
   }
 
-  // Generate circular favicon & apple touch icon from logo.png
+  // Circular favicon generation (unchanged)
   function createCircularFaviconFromImage() {
     const img = new Image();
-    img.crossOrigin = "Anonymous"; // optional, but same-origin works
-    img.src = "logo.png?" + Date.now(); // cache-bust for fresh generation
+    img.crossOrigin = "Anonymous";
+    img.src = "logo.png?" + Date.now();
     img.onload = function() {
-      // helper: generate circular canvas of given size
       function getCircularDataURL(size, callback) {
         const canvas = document.createElement('canvas');
         canvas.width = size;
@@ -498,11 +628,9 @@
         ctx.beginPath();
         ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
         ctx.clip();
-        // cover image to fit the circle without distortion
         const imgAspect = img.width / img.height;
-        const targetAspect = 1;
         let drawW, drawH, dx, dy;
-        if (imgAspect > targetAspect) {
+        if (imgAspect > 1) {
           drawH = size;
           drawW = img.width * (size / img.height);
           dx = (size - drawW) / 2;
@@ -516,65 +644,21 @@
         ctx.drawImage(img, dx, dy, drawW, drawH);
         callback(canvas.toDataURL('image/png'));
       }
-      
-      // Replace favicons: remove existing icon links and inject circular versions
       const existingIcons = document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]');
       existingIcons.forEach(link => link.remove());
-      
-      // Generate 32x32 for standard favicon (modern browsers use larger but we cover)
-      getCircularDataURL(32, (icon32) => {
-        const link32 = document.createElement('link');
-        link32.rel = 'icon';
-        link32.type = 'image/png';
-        link32.sizes = '32x32';
-        link32.href = icon32;
-        document.head.appendChild(link32);
-      });
-      
-      getCircularDataURL(64, (icon64) => {
-        const link64 = document.createElement('link');
-        link64.rel = 'icon';
-        link64.type = 'image/png';
-        link64.sizes = '64x64';
-        link64.href = icon64;
-        document.head.appendChild(link64);
-      });
-      
-      // Apple Touch Icon (180x180 circular)
-      getCircularDataURL(180, (appleIcon) => {
-        const appleLink = document.createElement('link');
-        appleLink.rel = 'apple-touch-icon';
-        appleLink.sizes = '180x180';
-        appleLink.href = appleIcon;
-        document.head.appendChild(appleLink);
-      });
-      
-      // also add a 16x16 for completeness
-      getCircularDataURL(16, (icon16) => {
-        const link16 = document.createElement('link');
-        link16.rel = 'icon';
-        link16.type = 'image/png';
-        link16.sizes = '16x16';
-        link16.href = icon16;
-        document.head.appendChild(link16);
-      });
-      
-      console.log('✅ Circular favicon + touch icons generated from logo.png');
+      getCircularDataURL(32, (icon32) => { const link32 = document.createElement('link'); link32.rel = 'icon'; link32.type = 'image/png'; link32.sizes = '32x32'; link32.href = icon32; document.head.appendChild(link32); });
+      getCircularDataURL(64, (icon64) => { const link64 = document.createElement('link'); link64.rel = 'icon'; link64.type = 'image/png'; link64.sizes = '64x64'; link64.href = icon64; document.head.appendChild(link64); });
+      getCircularDataURL(180, (appleIcon) => { const appleLink = document.createElement('link'); appleLink.rel = 'apple-touch-icon'; appleLink.sizes = '180x180'; appleLink.href = appleIcon; document.head.appendChild(appleLink); });
+      getCircularDataURL(16, (icon16) => { const link16 = document.createElement('link'); link16.rel = 'icon'; link16.type = 'image/png'; link16.sizes = '16x16'; link16.href = icon16; document.head.appendChild(link16); });
     };
-    img.onerror = () => console.warn("⚠️ Could not load logo.png for circular favicon; using fallback square icon.");
+    img.onerror = () => console.warn("logo placeholder for favicon");
   }
-  
-  // Wait until page resources settle, then generate circular favicon
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', createCircularFaviconFromImage);
-  } else {
-    createCircularFaviconFromImage();
-  }
-  
-  // -------------------- 2. EXISTING PAGE NAVIGATION & INTERACTIVITY --------------------
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', createCircularFaviconFromImage);
+  else createCircularFaviconFromImage();
+
+  // PAGE NAVIGATION
   const pages = { home: 'page-home', about: 'page-about', programs: 'page-programs', team: 'page-team', donate: 'page-donate', contact: 'page-contact' };
   const navBtns = document.querySelectorAll('.nav-btn');
-  
   function showPage(id) {
     if (!pages[id]) id = 'home';
     Object.values(pages).forEach(p => document.getElementById(p)?.classList.remove('active-page'));
@@ -583,15 +667,14 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
   }
-  
   navBtns.forEach(b => b.addEventListener('click', () => showPage(b.dataset.page)));
   document.querySelectorAll('[data-nav]').forEach(el => el.addEventListener('click', () => showPage(el.dataset.nav)));
   document.getElementById('learnMoreLink')?.addEventListener('click', e => { e.preventDefault(); showPage('contact'); });
   window.addEventListener('hashchange', () => showPage(location.hash.slice(1)));
   const initHash = location.hash.slice(1);
   showPage(initHash && pages[initHash] ? initHash : 'home');
-  
-  // Donate amount selector & custom
+
+  // DONATION & CONTACT LOGIC (preserved)
   document.querySelectorAll('.amt-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.amt-btn').forEach(b => b.classList.remove('selected'));
@@ -600,7 +683,6 @@
       if (customInput) customInput.value = '';
     });
   });
-  
   document.getElementById('donateBtn')?.addEventListener('click', () => {
     const selected = document.querySelector('.amt-btn.selected');
     const custom = document.getElementById('custom-amount')?.value.trim();
@@ -612,7 +694,6 @@
     if (!email) { showToast('Please enter your email address.'); return; }
     showToast(`Thank you ${name}! Your $${amount} donation is being processed securely.`);
   });
-  
   document.getElementById('contactForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
@@ -623,13 +704,6 @@
     showToast(`Thank you ${name}! We'll be in touch within 48 hours.`);
     this.reset();
   });
-  
-  // Additional subtle enhancement: ensure the logo image gets extra roundness in case of dynamic load
-  const brandImg = document.getElementById('brandLogo');
-  if(brandImg) {
-    brandImg.style.borderRadius = '50%';
-    brandImg.style.objectFit = 'cover';
-  }
 })();
 </script>
 </body>
