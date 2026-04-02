@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impact — Ramba Health Initiative</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.kpi-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 70px; }
+.kpi-intro-text .section-sub { margin-bottom: 28px; }
+
+.kpi-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.kpi-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px; padding: 30px 22px;
+  text-align: center;
+  transition: background .25s, transform .25s, border-color .25s;
+  cursor: default;
+}
+.kpi-card:hover { background: rgba(0,168,157,0.15); transform: translateY(-5px); border-color: rgba(0,168,157,0.35); }
+.kpi-icon { font-size: 2.2rem; margin-bottom: 14px; }
+.kpi-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 1rem;
+  color: white; margin-bottom: 6px; line-height: 1.2;
+}
+.kpi-desc { font-size: 0.75rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+.kpi-section { background: var(--navy); }
+.kpi-section .section-title { color: white; }
+.kpi-section .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 60px; }
+
+.framework-strip {
+  background: var(--teal);
+  padding: 50px 6%;
+  display: flex; justify-content: space-around; align-items: center;
+  flex-wrap: wrap; gap: 20px;
+}
+.fs-item { text-align: center; }
+.fs-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 3rem; color: white; line-height: 1;
+}
+.fs-label { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.75); letter-spacing: 1px; text-transform: uppercase; }
+
+.sdg-section { background: var(--light-bg); }
+.sdg-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 40px; }
+.sdg-card {
+  background: white; border-radius: 10px; padding: 20px;
+  border-top: 4px solid var(--teal);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.sdg-card .sdg-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 2rem; color: var(--teal);
+}
+.sdg-card .sdg-label { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-top: 6px; }
+
+@media (max-width: 900px) {
+  .kpi-intro { grid-template-columns: 1fr; gap: 30px; }
+  .kpi-grid { grid-template-columns: repeat(2,1fr); }
+  .sdg-grid { grid-template-columns: repeat(2,1fr); }
+}
+</style>
+</head>
+<body data-page="impact">
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-seal"><img src="logo.png" alt="RHI Logo"></div>
+    <div class="logo-text"><div class="abbr">RHI</div><div class="full">Ramba Health Initiative</div></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="index">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="our-work.html" data-page="our-work">Our Work</a></li>
+    <li><a href="impact.html" data-page="impact">Impact</a></li>
+    <li><a href="team.html" data-page="team">Team</a></li>
+    <li><a href="get-involved.html" data-page="get-involved">Get Involved</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+    <li><a href="contact.html" class="btn-nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag">Results & Accountability</div>
+    <h1 class="section-title fade-up">Impact</h1>
+    <p class="fade-up delay-1">RHI tracks 8 Key Performance Indicators across our programme domains to drive accountability, learning, and continuous improvement.</p>
+  </div>
+
+  <!-- KPI SECTION -->
+  <section class="kpi-section">
+    <div class="kpi-intro">
+      <div class="kpi-intro-text">
+        <div class="section-tag" style="color:var(--teal)">Our Indicators</div>
+        <h2 class="section-title" style="color:white">8 Key Performance<br>Indicators</h2>
+        <p class="section-sub">RHI's 8 Key Performance Indicators are tracked across all programme domains to ensure transparent accountability to communities, donors, and government partners.</p>
+        <a href="contact.html" class="btn-primary">Request Impact Report →</a>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:32px;">
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:16px;">RHI is committed to rigorous, transparent measurement. Our KPI framework aligns with Rwanda's HMIS reporting standards and international health sector accountability frameworks.</p>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.7;">Data is collected quarterly, validated by independent reviewers, and published in our annual programme report.</p>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-label">Programme Reach</div>
+        <div class="kpi-desc">Total beneficiaries reached across all RHI programme areas by district and sector.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">👥</div>
+        <div class="kpi-label">Workforce Capacity</div>
+        <div class="kpi-desc">Number of CHWs and health workers trained, certified, and actively deployed.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🏥</div>
+        <div class="kpi-label">Health Outcomes</div>
+        <div class="kpi-desc">Measurable improvements in maternal, child, and NCD health outcome indicators.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🔄</div>
+        <div class="kpi-label">Behaviour Change</div>
+        <div class="kpi-desc">Uptake of evidence-based health behaviours among programme participants.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">📱</div>
+        <div class="kpi-label">Digital Engagement</div>
+        <div class="kpi-desc">Active users of RHI digital health platforms and mHealth tools by programme.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">💰</div>
+        <div class="kpi-label">Financial Sustainability</div>
+        <div class="kpi-desc">Revenue diversification ratio and cost-per-beneficiary across programme areas.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🔬</div>
+        <div class="kpi-label">Research Output</div>
+        <div class="kpi-desc">Publications, policy briefs, and evidence contributions to Rwanda's health knowledge base.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🤝</div>
+        <div class="kpi-label">Partner Engagement</div>
+        <div class="kpi-desc">Active partnerships with government, donors, and community organisations.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="framework-strip">
+    <div class="fs-item"><div class="fs-num">3</div><div class="fs-label">Focus Domains</div></div>
+    <div class="fs-item"><div class="fs-num">5</div><div class="fs-label">Programme Areas</div></div>
+    <div class="fs-item"><div class="fs-num">8</div><div class="fs-label">KPIs Tracked</div></div>
+    <div class="fs-item"><div class="fs-num">6</div><div class="fs-label">Service Pillars</div></div>
+    <div class="fs-item"><div class="fs-num">2026</div><div class="fs-label">Year Established</div></div>
+  </div>
+
+  <!-- SDG ALIGNMENT -->
+  <section class="sdg-section">
+    <div class="section-tag">Global Goals</div>
+    <h2 class="section-title">SDG Alignment</h2>
+    <p class="section-sub">RHI's programmes directly advance multiple UN Sustainable Development Goals.</p>
+    <div class="sdg-grid">
+      <div class="sdg-card"><div class="sdg-num">SDG 1</div><div class="sdg-label">No Poverty — Health costs drive poverty; RHI reduces out-of-pocket health expenditure.</div></div>
+      <div class="sdg-card"><div class="sdg-num">SDG 3</div><div class="sdg-label">Good Health — Our primary SDG: universal health coverage, MCH, NCDs & health security.</div></div>
+      <div class="sdg-card"><div class="sdg-num">SDG 10</div><div class="sdg-label">Reduced Inequalities — Equity-focused delivery to underserved and rural communities.</div></div>
+      <div class="sdg-card"><div class="sdg-num">SDG 17</div><div class="sdg-label">Partnerships for the Goals — Multi-sector collaboration driving health system strengthening.</div></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><div class="abbr">RHI</div><div class="tagline">Ramba Health Initiative</div><p>Rwanda's integrated Blended Value organization advancing evidence-based, digitally-enhanced health solutions.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="impact.html">Impact</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="team.html">Our Team</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@rambahi.rw">info@rambahi.rw</a></li><li><a href="#">Kigali, Rwanda</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ramba Health Initiative · Registered Rwanda</p>
+    <div class="footer-pulse"><div class="pulse-dot"></div><div class="pulse-label">Advancing community health · Est. 2026</div></div>
+  </div>
+</footer>
+<script>document.querySelectorAll('.nav-links a[data-page]').forEach(a=>{if(a.dataset.page===document.body.dataset.page)a.classList.add('active');});</script>
+<script>
+(function(){
+  var img = new Image();
+  img.onload = function(){
+    var c = document.createElement('canvas');
+    c.width = c.height = 64;
+    var ctx = c.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(32,32,32,0,Math.PI*2);
+    ctx.closePath();
+    ctx.clip();
+    ctx.drawImage(img,0,0,64,64);
+    var link = document.querySelector("link[rel='icon']");
+    link.href = c.toDataURL('image/png');
+  };
+  img.src = 'logo.png';
+})();
+</script></body>
+</html>
