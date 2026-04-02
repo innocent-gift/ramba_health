@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — Ramba Health Initiative</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.work-layout { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
+
+.work-tabs { position: sticky; top: 90px; }
+.work-tab {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 20px 18px; border-radius: 10px;
+  cursor: pointer; transition: background .2s;
+  border: none; background: none; width: 100%; text-align: left;
+  margin-bottom: 4px;
+}
+.work-tab:hover { background: var(--teal-light); }
+.work-tab.active { background: var(--teal-light); }
+.work-tab .tab-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 1.8rem;
+  color: var(--border); line-height: 1; transition: color .2s; flex-shrink: 0;
+}
+.work-tab.active .tab-num, .work-tab:hover .tab-num { color: var(--teal); }
+.work-tab .tab-info {}
+.work-tab .tab-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 0.88rem;
+  color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.work-tab .tab-brief { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+.work-panel { display: none; }
+.work-panel.active { display: block; }
+
+.panel-hero {
+  background: var(--navy); border-radius: 16px;
+  padding: 44px; margin-bottom: 32px;
+  position: relative; overflow: hidden;
+}
+.panel-hero::after {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,168,157,0.2) 0%, transparent 70%);
+}
+.panel-hero .tag {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 8px;
+}
+.panel-hero h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 2.2rem; color: white; line-height: 1.05; margin-bottom: 6px;
+}
+.panel-hero .sub { font-size: 0.88rem; color: rgba(255,255,255,0.55); font-style: italic; }
+
+.panel-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.activities-card, .revenue-card {
+  background: white; border-radius: 12px; padding: 28px;
+  box-shadow: var(--shadow);
+}
+.activities-card h4, .revenue-card h4 {
+  font-size: 0.72rem; font-weight: 700;
+  color: var(--teal); letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.activity-item {
+  display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start;
+}
+.activity-item .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal); margin-top: 6px; flex-shrink: 0;
+}
+.activity-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+
+.revenue-card { grid-column: span 2; }
+.revenue-model-box {
+  background: var(--teal-light); border-radius: 8px;
+  padding: 18px 20px; border-left: 3px solid var(--teal);
+}
+.revenue-model-box .label { font-size: 0.7rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; }
+.revenue-model-box p { font-size: 0.88rem; color: var(--text); margin-top: 6px; }
+
+@media (max-width: 900px) {
+  .work-layout { grid-template-columns: 1fr; }
+  .work-tabs { position: static; display: flex; overflow-x: auto; gap: 8px; padding-bottom: 8px; }
+  .work-tab { min-width: 140px; }
+  .panel-body { grid-template-columns: 1fr; }
+  .revenue-card { grid-column: span 1; }
+}
+</style>
+</head>
+<body data-page="our-work">
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-seal"><img src="logo.png" alt="RHI Logo"></div>
+    <div class="logo-text"><div class="abbr">RHI</div><div class="full">Ramba Health Initiative</div></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="index">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="our-work.html" data-page="our-work">Our Work</a></li>
+    <li><a href="impact.html" data-page="impact">Impact</a></li>
+    <li><a href="team.html" data-page="team">Team</a></li>
+    <li><a href="get-involved.html" data-page="get-involved">Get Involved</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+    <li><a href="contact.html" class="btn-nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag">What We Do</div>
+    <h1 class="section-title fade-up">Our Work</h1>
+    <p class="fade-up delay-1">Five integrated programme areas delivering measurable health impact across Rwanda's communities.</p>
+  </div>
+
+  <section>
+    <div class="work-layout">
+      <!-- TABS -->
+      <div class="work-tabs">
+        <button class="work-tab active" onclick="switchPanel(0,this)">
+          <div class="tab-num">01</div>
+          <div class="tab-info">
+            <div class="tab-name">Maternal & Child Health</div>
+            <div class="tab-brief">MCH integrated services</div>
+          </div>
+        </button>
+        <button class="work-tab" onclick="switchPanel(1,this)">
+          <div class="tab-num">02</div>
+          <div class="tab-info">
+            <div class="tab-name">Non-Communicable Diseases</div>
+            <div class="tab-brief">Community NCD prevention</div>
+          </div>
+        </button>
+        <button class="work-tab" onclick="switchPanel(2,this)">
+          <div class="tab-num">03</div>
+          <div class="tab-info">
+            <div class="tab-name">Health Outcomes</div>
+            <div class="tab-brief">Evidence & measurement</div>
+          </div>
+        </button>
+        <button class="work-tab" onclick="switchPanel(3,this)">
+          <div class="tab-num">04</div>
+          <div class="tab-info">
+            <div class="tab-name">Digital NCDs</div>
+            <div class="tab-brief">mHealth & digital tools</div>
+          </div>
+        </button>
+        <button class="work-tab" onclick="switchPanel(4,this)">
+          <div class="tab-num">05</div>
+          <div class="tab-info">
+            <div class="tab-name">Global Health Security</div>
+            <div class="tab-brief">GHS preparedness</div>
+          </div>
+        </button>
+      </div>
+
+      <!-- PANELS -->
+      <div id="panels">
+        <div class="work-panel active" id="panel-0">
+          <div class="panel-hero">
+            <div class="tag">Programme 01</div>
+            <h2>Maternal & Child Health (MCH)</h2>
+            <div class="sub">Integrated Community-based Novel Blended Model</div>
+          </div>
+          <div class="panel-body">
+            <div class="activities-card">
+              <h4>Key Activities</h4>
+              <div class="activity-item"><div class="dot"></div><p>Integrating Rwandan families with comprehensive approaches supporting evidence-based maternal services at community level.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Building partnerships and coordination networks for antenatal care utilization and skilled birth attendance.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Transparency, coordination, and evidence-sharing with community health workers and district health teams.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Coordination in community-based maternal health decisions and integrated care pathways.</p></div>
+            </div>
+            <div class="activities-card">
+              <h4>Digital Components</h4>
+              <div class="activity-item"><div class="dot"></div><p>mHealth platforms for antenatal appointment tracking and maternal health reminders.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Digital data collection tools for CHW reporting and follow-up on mother-baby pairs.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Dashboards for facility-level monitoring of maternal and neonatal health indicators.</p></div>
+            </div>
+            <div class="revenue-card">
+              <h4>Revenue Model & Sustainability</h4>
+              <div class="revenue-model-box">
+                <div class="label">Blended Value Approach</div>
+                <p>MCH programme sustainability is achieved through government co-financing, bilateral donor funding, and community health insurance integration. RHI's blended value model ensures long-term programme continuity beyond initial grant cycles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-panel" id="panel-1">
+          <div class="panel-hero">
+            <div class="tag">Programme 02</div>
+            <h2>Non-Communicable Diseases (NCDs)</h2>
+            <div class="sub">Community-based Prevention and Care Management</div>
+          </div>
+          <div class="panel-body">
+            <div class="activities-card">
+              <h4>Key Activities</h4>
+              <div class="activity-item"><div class="dot"></div><p>Deploying community-based NCD screening for hypertension, diabetes, and cardiovascular diseases across Rwanda.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Training CHWs on NCD risk factor identification, basic counselling, and referral pathways.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Implementing evidence-based behaviour change communication for lifestyle disease prevention.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Establishing community NCD support groups and self-management education programmes.</p></div>
+            </div>
+            <div class="activities-card">
+              <h4>Digital Components</h4>
+              <div class="activity-item"><div class="dot"></div><p>Mobile screening tools for blood pressure and blood glucose measurement at community level.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Patient follow-up systems ensuring continuity of NCD care between facility visits.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Digital referral pathways connecting communities to specialist NCD care at district hospitals.</p></div>
+            </div>
+            <div class="revenue-card">
+              <h4>Revenue Model & Sustainability</h4>
+              <div class="revenue-model-box">
+                <div class="label">Fee-for-Service & Grants</div>
+                <p>NCD programmes are financed through a mix of impact investment, government NCD programme co-funding, and fee-for-service components within the national community health insurance scheme (Mutuelle de Santé).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-panel" id="panel-2">
+          <div class="panel-hero">
+            <div class="tag">Programme 03</div>
+            <h2>Health Outcomes Measurement</h2>
+            <div class="sub">Evidence-Based Performance Monitoring & Learning</div>
+          </div>
+          <div class="panel-body">
+            <div class="activities-card">
+              <h4>Key Activities</h4>
+              <div class="activity-item"><div class="dot"></div><p>Deploying standardized metrics frameworks for routine health outcomes data collection across all RHI programme areas.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Conducting population-based surveys of community health indicators and programme reach metrics.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Publishing quarterly outcomes dashboards accessible to government, donors, and community stakeholders.</p></div>
+            </div>
+            <div class="activities-card">
+              <h4>Learning Systems</h4>
+              <div class="activity-item"><div class="dot"></div><p>Continuous quality improvement cycles informed by real-time programme data and community feedback loops.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Research partnerships with Rwandan universities and international academic institutions.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Documentation and dissemination of programme learnings through peer-reviewed publications and policy briefs.</p></div>
+            </div>
+            <div class="revenue-card">
+              <h4>Revenue Model & Sustainability</h4>
+              <div class="revenue-model-box">
+                <div class="label">Research & Consultancy</div>
+                <p>Health outcomes work generates revenue through commissioned research, government evaluation contracts, and consultancy services for other health organizations seeking evidence and evaluation expertise.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-panel" id="panel-3">
+          <div class="panel-hero">
+            <div class="tag">Programme 04</div>
+            <h2>Digital NCDs Management</h2>
+            <div class="sub">Technology-Enhanced NCD Prevention and Care</div>
+          </div>
+          <div class="panel-body">
+            <div class="activities-card">
+              <h4>Key Activities</h4>
+              <div class="activity-item"><div class="dot"></div><p>Building mobile-first digital platforms for NCD patient monitoring, medication adherence, and follow-up.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Integrating mHealth solutions with Rwanda's national Health Management Information System (HMIS).</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Creating interoperable electronic health records ensuring NCD care continuity across levels of care.</p></div>
+            </div>
+            <div class="activities-card">
+              <h4>Innovations</h4>
+              <div class="activity-item"><div class="dot"></div><p>AI-assisted screening tools for early detection of hypertension and diabetes at community entry points.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>SMS-based medication reminders and health education content in Kinyarwanda.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Digital health data quality assurance training and mentoring for facility staff.</p></div>
+            </div>
+            <div class="revenue-card">
+              <h4>Revenue Model & Sustainability</h4>
+              <div class="revenue-model-box">
+                <div class="label">SaaS Licensing & Partnerships</div>
+                <p>Digital NCD tools are licensed to government health systems and other NGOs on a cost-recovery basis, creating a sustainable revenue stream that cross-subsidizes services in underserved communities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-panel" id="panel-4">
+          <div class="panel-hero">
+            <div class="tag">Programme 05</div>
+            <h2>Global Health Security (GHS)</h2>
+            <div class="sub">Community-Level Health Security Preparedness & Response</div>
+          </div>
+          <div class="panel-body">
+            <div class="activities-card">
+              <h4>Key Activities</h4>
+              <div class="activity-item"><div class="dot"></div><p>Strengthening community-based disease surveillance and early warning systems for epidemic-prone diseases.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Building community emergency preparedness plans and rapid response capacity at sector level.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Integrating One Health approaches into CHW training curricula for zoonotic disease prevention.</p></div>
+            </div>
+            <div class="activities-card">
+              <h4>Partnerships</h4>
+              <div class="activity-item"><div class="dot"></div><p>Facilitating cross-sector health security exercises and simulation drills with district authorities.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Supporting International Health Regulations (IHR) compliance and reporting across Rwanda's health system.</p></div>
+              <div class="activity-item"><div class="dot"></div><p>Coordinating with Rwanda Biomedical Centre and global health security partners on preparedness frameworks.</p></div>
+            </div>
+            <div class="revenue-card">
+              <h4>Revenue Model & Sustainability</h4>
+              <div class="revenue-model-box">
+                <div class="label">Government Contracts & Bilateral Funding</div>
+                <p>GHS work is funded through Rwanda Ministry of Health contracts, bilateral funding from USAID, CDC, and WHO, and emergency preparedness grants from global health security funding mechanisms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><div class="abbr">RHI</div><div class="tagline">Ramba Health Initiative</div><p>Rwanda's integrated Blended Value organization advancing evidence-based, digitally-enhanced, community-centred health solutions.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="impact.html">Impact</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="team.html">Our Team</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@rambahi.rw">info@rambahi.rw</a></li><li><a href="#">Kigali, Rwanda</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ramba Health Initiative · Registered Rwanda</p>
+    <div class="footer-pulse"><div class="pulse-dot"></div><div class="pulse-label">Advancing community health · Est. 2026</div></div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.nav-links a[data-page]').forEach(a => {
+    if (a.dataset.page === document.body.dataset.page) a.classList.add('active');
+  });
+  function switchPanel(idx, btn) {
+    document.querySelectorAll('.work-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.work-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + idx).classList.add('active');
+  }
+</script>
+<script>
+(function(){
+  var img = new Image();
+  img.onload = function(){
+    var c = document.createElement('canvas');
+    c.width = c.height = 64;
+    var ctx = c.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(32,32,32,0,Math.PI*2);
+    ctx.closePath();
+    ctx.clip();
+    ctx.drawImage(img,0,0,64,64);
+    var link = document.querySelector("link[rel='icon']");
+    link.href = c.toDataURL('image/png');
+  };
+  img.src = 'logo.png';
+})();
+</script></body>
+</html>
