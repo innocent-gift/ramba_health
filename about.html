@@ -109,7 +109,20 @@
     <li><a href="contact.html" data-page="contact">Contact</a></li>
     <li><a href="contact.html" class="btn-nav-donate">Donate</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html" data-page="index">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="our-work.html" data-page="our-work">Our Work</a></li>
+    <li><a href="impact.html" data-page="impact">Impact</a></li>
+    <li><a href="team.html" data-page="team">Team</a></li>
+    <li><a href="get-involved.html" data-page="get-involved">Get Involved</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn-nav-donate">Donate</a>
+</div>
 
 <div class="page-wrap">
   <div class="page-hero">
@@ -260,9 +273,13 @@
   </div>
 </footer>
 <script>
-  document.querySelectorAll('.nav-links a[data-page]').forEach(a => {
+  document.querySelectorAll('.nav-links a[data-page], .mobile-nav a[data-page]').forEach(a => {
     if (a.dataset.page === document.body.dataset.page) a.classList.add('active');
   });
+  var hbg = document.getElementById('hamburger');
+  var mnav = document.getElementById('mobileNav');
+  hbg.addEventListener('click', function(){ hbg.classList.toggle('open'); mnav.classList.toggle('open'); });
+  document.querySelectorAll('.mobile-nav a').forEach(function(a){ a.addEventListener('click', function(){ hbg.classList.remove('open'); mnav.classList.remove('open'); }); });
 </script>
 <script>
 (function(){
