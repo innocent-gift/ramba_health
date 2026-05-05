@@ -85,12 +85,31 @@
 .revenue-model-box .label { font-size: 0.7rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; }
 .revenue-model-box p { font-size: 0.88rem; color: var(--text); margin-top: 6px; }
 
+/* Photo grid */
+.work-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 60px;
+}
+.work-photos img {
+  width: 100%; height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: transform .3s, box-shadow .3s;
+}
+.work-photos img:hover { transform: scale(1.03); box-shadow: 0 12px 36px rgba(13,43,69,0.15); }
+.work-photos img:first-child { grid-column: span 2; height: 300px; }
+
 @media (max-width: 900px) {
   .work-layout { grid-template-columns: 1fr; }
   .work-tabs { position: static; display: flex; overflow-x: auto; gap: 8px; padding-bottom: 8px; }
   .work-tab { min-width: 140px; }
   .panel-body { grid-template-columns: 1fr; }
   .revenue-card { grid-column: span 1; }
+  .work-photos { grid-template-columns: 1fr 1fr; }
+  .work-photos img:first-child { grid-column: span 2; }
 }
 </style>
 </head>
@@ -320,6 +339,19 @@
       </div>
     </div>
   </section>
+
+  <!-- PHOTO GRID -->
+  <section style="padding-top:0;">
+    <div class="section-tag">Our Work in Pictures</div>
+    <h2 class="section-title">From the Community</h2>
+    <div class="work-photos">
+      <img src="at_job.jpeg" alt="RHI team at work">
+      <img src="field1.jpeg" alt="Community health work">
+      <img src="field2.jpeg" alt="Health outreach">
+      <img src="field3.jpeg" alt="Field activities">
+    </div>
+  </section>
+
 </div>
 
 <footer>
