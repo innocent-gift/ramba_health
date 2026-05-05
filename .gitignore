@@ -1,0 +1,5 @@
+# Large media files - host these externally
+*.mp4
+*.mov
+*.avi
+*.mkv
