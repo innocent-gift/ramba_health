@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 :root {
   --teal: #00A89D;
@@ -21,7 +21,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--text);
   background: var(--white);
   overflow-x: hidden;
@@ -55,12 +55,12 @@ nav {
 .logo-seal img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .logo-text .abbr {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 900; font-size: 1.8rem;
   color: var(--teal); letter-spacing: 1px; line-height: 1;
 }
 .logo-text .full {
-  font-size: 0.72rem; font-weight: 500;
+  font-size: 0.72rem; font-weight: 600;
   color: rgba(255,255,255,0.6);
   letter-spacing: 0.8px; text-transform: uppercase; margin-top: 3px;
 }
@@ -70,7 +70,7 @@ nav {
   list-style: none;
 }
 .nav-links a {
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 1px;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
   text-decoration: none;
@@ -160,9 +160,9 @@ section { padding: 90px 6%; }
 }
 
 .section-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 900; font-size: clamp(2rem, 3.5vw, 3rem);
-  color: var(--navy); line-height: 1.05;
+  font-family: 'Syne', sans-serif;
+  font-weight: 900; font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  color: var(--navy); line-height: 1.1;
   margin-bottom: 14px;
 }
 
@@ -174,20 +174,20 @@ section { padding: 90px 6%; }
 /* ── BUTTONS ── */
 .btn-primary {
   background: var(--teal); color: white;
-  padding: 13px 28px; border-radius: 4px;
+  padding: 13px 28px; border-radius: 6px;
   text-decoration: none; font-weight: 700;
-  font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase;
+  font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase;
   transition: background .2s, transform .2s;
   display: inline-flex; align-items: center; gap: 8px;
-  border: none; cursor: pointer; font-family: 'Barlow', sans-serif;
+  border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
 
 .btn-outline {
   background: transparent; color: var(--navy);
-  padding: 13px 28px; border-radius: 4px;
+  padding: 13px 28px; border-radius: 6px;
   text-decoration: none; font-weight: 700;
-  font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase;
+  font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase;
   border: 2px solid var(--navy);
   transition: all .2s;
   display: inline-flex; align-items: center; gap: 8px;
@@ -196,9 +196,9 @@ section { padding: 90px 6%; }
 
 .btn-outline-white {
   background: transparent; color: white;
-  padding: 13px 28px; border-radius: 4px;
+  padding: 13px 28px; border-radius: 6px;
   text-decoration: none; font-weight: 700;
-  font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase;
+  font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase;
   border: 2px solid rgba(255,255,255,0.35);
   transition: all .2s;
   display: inline-flex; align-items: center; gap: 8px;
@@ -235,7 +235,7 @@ section { padding: 90px 6%; }
   background: radial-gradient(circle, rgba(0,168,157,0.08) 0%, transparent 70%);
 }
 .page-hero .section-tag { color: var(--teal); }
-.page-hero .section-title { color: white; font-size: clamp(2.5rem, 5vw, 4rem); }
+.page-hero .section-title { color: white; font-size: clamp(2.2rem, 5vw, 3.8rem); font-family: 'Syne', sans-serif; }
 .page-hero p { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.75; max-width: 640px; margin-top: 14px; }
 
 /* ── FOOTER ── */
@@ -248,7 +248,7 @@ footer {
   gap: 50px; margin-bottom: 40px;
 }
 .footer-brand .abbr {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 900; font-size: 1.8rem; color: var(--teal);
 }
 .footer-brand .tagline {
@@ -259,8 +259,8 @@ footer {
   font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.7;
 }
 .footer-col h4 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700; font-size: 0.8rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700; font-size: 0.75rem;
   color: rgba(255,255,255,0.5); letter-spacing: 2px;
   text-transform: uppercase; margin-bottom: 16px;
 }

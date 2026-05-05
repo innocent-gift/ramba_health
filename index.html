@@ -17,7 +17,7 @@
 <meta name="keywords" content="Rwanda NGO, community health Rwanda, digital health Rwanda, maternal health Rwanda, NCD prevention Rwanda, global health security, health data Africa, Health social enterprise Rwanda">
 <meta property="og:title" content="RAMBA Health Initiative | Rwanda's Integrated Health Blended Value Organization">
 <meta property="og:description" content="Data-driven. Community-centred. Rwanda-based. RHI integrates MCH, NCDs, and Global Health Security into one organisation.">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
 /* ── HERO ── */
@@ -39,7 +39,7 @@
   text-transform: uppercase; margin-bottom: 22px;
 }
 .hero-title {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 900;
   font-size: clamp(3rem, 5.5vw, 5rem);
   color: var(--white);
@@ -58,34 +58,34 @@
 
 .hero-right {
   position: relative;
-  background: linear-gradient(135deg, #1a4060 0%, #0D2B45 100%);
   overflow: hidden;
 }
-.hero-right::before {
-  content: '';
+.hero-right img.hero-photo {
   position: absolute; inset: 0;
-  background: url('https://images.unsplash.com/photo-1584515933487-779824d29309?w=900&q=80') center/cover;
-  opacity: 0.35;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
 }
 .hero-right::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(to right, var(--navy) 0%, transparent 50%);
+  background: linear-gradient(to right, var(--navy) 0%, rgba(13,43,69,0.25) 60%, transparent 100%);
+  z-index: 1;
 }
 .hero-stat-float {
   position: absolute; bottom: 40px; right: 40px; z-index: 2;
-  background: rgba(0,168,157,0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0,168,157,0.3);
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,168,157,0.4);
   border-radius: 12px; padding: 20px 24px;
   color: white;
 }
 .hero-stat-float .big {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 900; font-size: 2.5rem;
   color: var(--teal); line-height: 1;
 }
-.hero-stat-float .label { font-size: 0.72rem; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; }
+.hero-stat-float .label { font-size: 0.72rem; color: rgba(255,255,255,0.7); letter-spacing: 1px; text-transform: uppercase; }
 
 /* Impact bar */
 .impact-bar {
@@ -101,7 +101,7 @@
   display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
 }
 .impact-num {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 900; font-size: 2.2rem; color: white; line-height: 1;
 }
 .impact-label {
@@ -110,7 +110,7 @@
 }
 
 /* Pillars */
-.pillars-section { background: var(--light-bg); }
+.pillars-section { background: #ffffff; }
 .pillars-header { text-align: center; margin-bottom: 52px; }
 .pillars-header .section-sub { margin: 0 auto; }
 .pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
@@ -133,14 +133,14 @@
 .pillar-card.ncds .pillar-icon { background: #E8EFF5; }
 .pillar-card.ghs .pillar-icon { background: #FEF5E7; }
 .pillar-num {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 800; font-size: 0.75rem;
   color: var(--teal); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
 }
 .pillar-card.ncds .pillar-num { color: var(--navy); }
 .pillar-card.ghs .pillar-num { color: var(--gold); }
 .pillar-title {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 800; font-size: 1.3rem;
   color: var(--navy); margin-bottom: 12px; line-height: 1.2;
 }
@@ -154,6 +154,62 @@
 }
 .btn-learn:hover { gap: 10px; }
 
+/* Video section */
+.video-section {
+  background: #ffffff;
+  padding: 90px 6%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.video-section .video-text .section-tag { display: block; margin-bottom: 10px; }
+.video-section .video-text .section-title { margin-bottom: 16px; }
+.video-section .video-text p {
+  font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 28px;
+}
+.video-wrap {
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(13,43,69,0.18);
+  position: relative;
+  aspect-ratio: 16/9;
+}
+.video-wrap video {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+
+/* From the field */
+.field-section {
+  position: relative;
+  min-height: 520px;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+.field-section img.field-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
+}
+.field-section::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(13,43,69,0.88) 0%, rgba(13,43,69,0.55) 55%, rgba(13,43,69,0.2) 100%);
+}
+.field-content {
+  position: relative; z-index: 2;
+  padding: 80px 6%;
+  max-width: 600px;
+}
+.field-content .section-tag { color: var(--teal); }
+.field-content h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: clamp(2rem, 4vw, 3.2rem);
+  color: white; line-height: 1.05; margin: 10px 0 18px;
+}
+.field-content p {
+  font-size: 0.95rem; color: rgba(255,255,255,0.72);
+  line-height: 1.75; margin-bottom: 32px;
+}
+
 /* CTA strip */
 .cta-strip {
   background: var(--navy);
@@ -161,7 +217,7 @@
   display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
 }
 .cta-strip h2 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 900; font-size: clamp(1.8rem, 3vw, 2.6rem);
   color: white; line-height: 1.1;
 }
@@ -172,6 +228,7 @@
   .hero { grid-template-columns: 1fr; }
   .hero-right { display: none; }
   .pillars-grid { grid-template-columns: 1fr; }
+  .video-section { grid-template-columns: 1fr; gap: 36px; }
   .cta-strip { grid-template-columns: 1fr; }
 }
 </style>
@@ -205,7 +262,6 @@
     <li><a href="about.html" data-page="about">About</a></li>
     <li><a href="our-work.html" data-page="our-work">Our Work</a></li>
     <li><a href="impact.html" data-page="impact">Impact</a></li>
-    <li><a href="team.html" data-page="team">Team</a></li>
     <li><a href="get-involved.html" data-page="get-involved">Get Involved</a></li>
     <li><a href="contact.html" data-page="contact">Contact</a></li>
   </ul>
@@ -229,6 +285,7 @@
     </div>
   </div>
   <div class="hero-right">
+    <img src="at_job.jpeg" alt="RHI team at work in the community" class="hero-photo">
     <div class="hero-stat-float">
       <div class="big">3</div>
       <div class="label">Focus Domains</div>
@@ -267,6 +324,21 @@
     </div>
   </div>
 </div>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <div class="video-text">
+    <div class="section-tag">See Our Work</div>
+    <h2 class="section-title">Health in Action</h2>
+    <p>Watch how RAMBA Health Initiative is transforming community health across Rwanda — from maternal care to NCD screening and pandemic preparedness.</p>
+    <a href="our-work.html" class="btn-primary">Explore Our Work →</a>
+  </div>
+  <div class="video-wrap">
+    <video controls preload="metadata" poster="at_job.jpeg">
+      <source src="video_ramba.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
 
 <!-- THREE PILLARS -->
 <section class="pillars-section">
@@ -317,6 +389,17 @@
     </div>
   </div>
 </section>
+
+<!-- FROM THE FIELD -->
+<div class="field-section">
+  <img src="the_team.jpeg" alt="RAMBA Health team in the field" class="field-bg">
+  <div class="field-content">
+    <div class="section-tag">From the Field</div>
+    <h2>People Behind<br>the Mission</h2>
+    <p>Our dedicated team of health professionals, researchers, and community health workers are on the ground every day — building trust, collecting data, and delivering care where it matters most.</p>
+    <a href="get-involved.html" class="btn-primary">Join Our Team →</a>
+  </div>
+</div>
 
 <!-- CTA STRIP -->
 <div class="cta-strip">
