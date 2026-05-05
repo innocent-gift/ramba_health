@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 :root {
   --teal: #00A89D;
@@ -21,7 +20,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: Georgia, 'Times New Roman', serif;
   color: var(--text);
   background: var(--white);
   overflow-x: hidden;
@@ -55,7 +54,7 @@ nav {
 .logo-seal img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .logo-text .abbr {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 900; font-size: 1.8rem;
   color: var(--teal); letter-spacing: 1px; line-height: 1;
 }
@@ -160,8 +159,8 @@ section { padding: 90px 6%; }
 }
 
 .section-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 900; font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700; font-size: clamp(1.9rem, 3.5vw, 2.8rem);
   color: var(--navy); line-height: 1.1;
   margin-bottom: 14px;
 }
@@ -179,7 +178,7 @@ section { padding: 90px 6%; }
   font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase;
   transition: background .2s, transform .2s;
   display: inline-flex; align-items: center; gap: 8px;
-  border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif;
+  border: none; cursor: pointer; font-family: Georgia, 'Times New Roman', serif;
 }
 .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
 
@@ -241,7 +240,7 @@ section { padding: 90px 6%; }
 .page-hero p,
 .page-hero h1 { position: relative; z-index: 2; }
 .page-hero .section-tag { color: var(--teal); }
-.page-hero .section-title { color: white; font-size: clamp(2.2rem, 5vw, 3.8rem); font-family: 'Syne', sans-serif; }
+.page-hero .section-title { color: white; font-size: clamp(2.2rem, 5vw, 3.8rem); font-family: 'Times New Roman', Times, serif; }
 .page-hero p { color: rgba(255,255,255,0.72); font-size: 1rem; line-height: 1.75; max-width: 640px; margin-top: 14px; }
 
 /* ── FOOTER ── */
@@ -254,7 +253,7 @@ footer {
   gap: 50px; margin-bottom: 40px;
 }
 .footer-brand .abbr {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 900; font-size: 1.8rem; color: var(--teal);
 }
 .footer-brand .tagline {
@@ -265,7 +264,7 @@ footer {
   font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.7;
 }
 .footer-col h4 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-weight: 700; font-size: 0.75rem;
   color: rgba(255,255,255,0.5); letter-spacing: 2px;
   text-transform: uppercase; margin-bottom: 16px;
