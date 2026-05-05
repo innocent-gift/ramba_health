@@ -29,11 +29,11 @@ body {
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; width: 100%; z-index: 1000;
-  background: var(--navy);
+  background: #ffffff;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 6%;
   height: 80px;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.30);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.10);
 }
 
 .nav-logo {
@@ -60,7 +60,7 @@ nav {
 }
 .logo-text .full {
   font-size: 0.72rem; font-weight: 600;
-  color: rgba(255,255,255,0.6);
+  color: var(--navy);
   letter-spacing: 0.8px; text-transform: uppercase; margin-top: 3px;
 }
 
@@ -71,7 +71,7 @@ nav {
 .nav-links a {
   font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
+  color: var(--navy);
   text-decoration: none;
   transition: color .2s;
   position: relative;
@@ -84,7 +84,7 @@ nav {
   background: var(--teal);
   transition: width .25s;
 }
-.nav-links a:hover { color: white; }
+.nav-links a:hover { color: var(--teal); }
 .nav-links a:hover::after { width: 100%; }
 .nav-links a.active { color: var(--teal); }
 .nav-links a.active::after { width: 100%; }
@@ -111,7 +111,7 @@ nav {
 }
 .hamburger span {
   display: block; width: 24px; height: 2px;
-  background: white; border-radius: 2px;
+  background: var(--navy); border-radius: 2px;
   transition: transform .3s, opacity .3s;
 }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
