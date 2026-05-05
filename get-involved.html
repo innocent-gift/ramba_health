@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="image.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get Involved — Ramba Health Initiative</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -82,7 +82,7 @@
 <body data-page="get-involved">
 <nav>
   <a class="nav-logo" href="index.html">
-    <div class="logo-seal"><img src="logo.png" alt="RHI Logo"></div>
+    <div class="logo-seal"><img src="image.png" alt="RHI Logo"></div>
     <div class="logo-text"><div class="abbr">RHI</div><div class="full">Ramba Health Initiative</div></div>
   </a>
   <ul class="nav-links">
@@ -95,13 +95,26 @@
     <li><a href="contact.html" data-page="contact">Contact</a></li>
     <li><a href="contact.html" class="btn-nav-donate">Donate</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html" data-page="index">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="our-work.html" data-page="our-work">Our Work</a></li>
+    <li><a href="impact.html" data-page="impact">Impact</a></li>
+    <li><a href="team.html" data-page="team">Team</a></li>
+    <li><a href="get-involved.html" data-page="get-involved">Get Involved</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn-nav-donate">Donate</a>
+</div>
 
 <div class="page-wrap">
   <div class="page-hero">
     <div class="section-tag">Partner With Us</div>
-    <h1 class="section-title fade-up">Get Involved</h1>
-    <p class="fade-up delay-1">Join RHI's mission to advance community health in Rwanda. Whether as a partner, donor, researcher, or volunteer — there's a role for you.</p>
+    <h1 class="section-title fade-up">Partner With RHI</h1>
+    <p class="fade-up delay-1">We are building Rwanda's most integrated community health organisation. We are looking for partners who share our commitment to evidence, community, and lasting impact.</p>
   </div>
 
   <!-- WAYS TO ENGAGE -->
@@ -139,38 +152,44 @@
     <div class="opp-table-wrap">
       <table>
         <thead>
-          <tr>
-            <th>Partner Name</th><th>Opportunity Type</th><th>Programme Area</th><th>Timeline</th><th>Investment</th>
-          </tr>
+          <tr><th>Partner Type</th><th>What We Offer</th><th>What We Seek</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Health Systems Partners</strong></td>
-            <td><span class="opp-type partner">Partnership</span></td>
-            <td>MCH — Maternal & Child Health</td>
-            <td>March 2025</td>
-            <td>$5,000+</td>
+            <td><strong>Bilateral &amp; Multilateral Donors</strong> (USAID, Global Fund, GIZ, etc.)</td>
+            <td><span class="opp-type partner">Donor</span></td>
+            <td>Rigorous M&amp;E, SDG alignment, HSSP-V integration, transparent reporting, co-design approach</td>
+            <td>Grant funding, technical assistance, policy access</td>
           </tr>
           <tr>
-            <td><strong>Digital Health Org</strong></td>
-            <td><span class="opp-type grant">Grant</span></td>
-            <td>Digital NCDs</td>
-            <td>April 2025</td>
-            <td>$10,000+</td>
+            <td><strong>Foundations</strong> (Gates, Wellcome, etc.)</td>
+            <td><span class="opp-type grant">Foundation</span></td>
+            <td>Research capacity, digital innovation pipeline, population data, publication outputs</td>
+            <td>Research grants, catalytic funding, thought leadership platforms</td>
           </tr>
           <tr>
-            <td><strong>Research Institution</strong></td>
+            <td><strong>Government of Rwanda</strong> (MOH, districts)</td>
+            <td><span class="opp-type partner">Government</span></td>
+            <td>Community implementation, data analytics, CHW training, platform deployment</td>
+            <td>MOUs, co-funding, policy endorsement, community access</td>
+          </tr>
+          <tr>
+            <td><strong>Academic &amp; Research Institutions</strong></td>
             <td><span class="opp-type research">Research</span></td>
-            <td>Health Outcomes Measurement</td>
-            <td>June 2025</td>
-            <td>In-kind</td>
+            <td>Field data access, implementation research partnerships, co-publication</td>
+            <td>Research expertise, academic credibility, publication support</td>
           </tr>
           <tr>
-            <td><strong>Bilateral Donor</strong></td>
-            <td><span class="opp-type grant">Grant</span></td>
-            <td>Global Health Security</td>
-            <td>March 2026</td>
-            <td>$50,000+</td>
+            <td><strong>Private Sector &amp; Social Enterprises</strong></td>
+            <td><span class="opp-type grant">Private</span></td>
+            <td>Telemedicine platform licensing, training services, health data analytics</td>
+            <td>Co-investment, technology partnerships, CSR funding</td>
+          </tr>
+          <tr>
+            <td><strong>NGOs &amp; Civil Society</strong></td>
+            <td><span class="opp-type partner">NGO</span></td>
+            <td>Sub-grant management, community health networks, behaviour change expertise</td>
+            <td>Referral partnerships, geographic reach, joint proposals</td>
           </tr>
         </tbody>
       </table>
@@ -211,14 +230,14 @@
     <div class="footer-brand"><div class="abbr">RHI</div><div class="tagline">Ramba Health Initiative</div><p>Rwanda's integrated Blended Value organization advancing evidence-based, digitally-enhanced health solutions.</p></div>
     <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="impact.html">Impact</a></li></ul></div>
     <div class="footer-col"><h4>Organisation</h4><ul><li><a href="team.html">Our Team</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@rambahi.rw">info@rambahi.rw</a></li><li><a href="#">Kigali, Rwanda</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@rambahealth.org">info@rambahealth.org</a></li><li><a href="#">Remera, Kigali, Rwanda</a></li><li><a href="tel:+250786354394">+250 786 354 394</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Ramba Health Initiative · Registered Rwanda</p>
-    <div class="footer-pulse"><div class="pulse-dot"></div><div class="pulse-label">Advancing community health · Est. 2026</div></div>
+    <p>&copy; 2026 RAMBA Health Initiative. All rights reserved. Registered, Rwanda.</p>
+    <div class="footer-pulse"><div class="pulse-dot"></div><div class="pulse-label">Advancing community health &middot; Est. 2026</div></div>
   </div>
 </footer>
-<script>document.querySelectorAll('.nav-links a[data-page]').forEach(a=>{if(a.dataset.page===document.body.dataset.page)a.classList.add('active');});</script>
+<script>document.querySelectorAll('.nav-links a[data-page],.mobile-nav a[data-page]').forEach(a=>{if(a.dataset.page===document.body.dataset.page)a.classList.add('active');});var hbg=document.getElementById('hamburger');var mnav=document.getElementById('mobileNav');hbg.addEventListener('click',function(){hbg.classList.toggle('open');mnav.classList.toggle('open');});document.querySelectorAll('.mobile-nav a').forEach(function(a){a.addEventListener('click',function(){hbg.classList.remove('open');mnav.classList.remove('open');});});</script>
 <script>
 (function(){
   var img = new Image();
@@ -234,7 +253,8 @@
     var link = document.querySelector("link[rel='icon']");
     link.href = c.toDataURL('image/png');
   };
-  img.src = 'logo.png';
+  img.src = 'image.png';
 })();
 </script></body>
 </html>
+
