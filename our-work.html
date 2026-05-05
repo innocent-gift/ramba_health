@@ -88,19 +88,23 @@
 /* Photo grid */
 .work-photos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   margin-top: 60px;
+  align-items: center;
 }
-.work-photos img {
-  width: 100%; height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  transition: transform .3s, box-shadow .3s;
+.work-photos .video-wrap {
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(13,43,69,0.18);
+  aspect-ratio: 16/9;
 }
-.work-photos img:hover { transform: scale(1.03); box-shadow: 0 12px 36px rgba(13,43,69,0.15); }
-.work-photos img:first-child { grid-column: span 2; height: 300px; }
+.work-photos .video-wrap iframe {
+  width: 100%; height: 100%;
+  display: block; border: none;
+}
+.work-photos .video-text .section-tag { display: block; margin-bottom: 10px; }
+.work-photos .video-text .section-title { margin-bottom: 16px; }
+.work-photos .video-text p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 28px; }
 
 @media (max-width: 900px) {
   .work-layout { grid-template-columns: 1fr; }
@@ -108,8 +112,7 @@
   .work-tab { min-width: 140px; }
   .panel-body { grid-template-columns: 1fr; }
   .revenue-card { grid-column: span 1; }
-  .work-photos { grid-template-columns: 1fr 1fr; }
-  .work-photos img:first-child { grid-column: span 2; }
+  .work-photos { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -340,15 +343,18 @@
     </div>
   </section>
 
-  <!-- PHOTO GRID -->
+  <!-- CITIZEN FEEDBACK VIDEO -->
   <section style="padding-top:0;">
-    <div class="section-tag">Our Work in Pictures</div>
-    <h2 class="section-title">From the Community</h2>
     <div class="work-photos">
-      <img src="at_job.jpeg" alt="RHI team at work">
-      <img src="field1.jpeg" alt="Community health work">
-      <img src="field2.jpeg" alt="Health outreach">
-      <img src="field3.jpeg" alt="Field activities">
+      <div class="video-text">
+        <div class="section-tag">Citizen Feedback</div>
+        <h2 class="section-title">Hear From the Community</h2>
+        <p>Real voices from the communities we serve — sharing their experiences with RHI's health programmes and the difference it has made in their lives.</p>
+        <a href="contact.html" class="btn-primary">Get In Touch →</a>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/uV7iRyDHYXM?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
