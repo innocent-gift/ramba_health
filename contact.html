@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="image.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Ramba Health Initiative</title>
+<title>Contact ï¿½ Ramba Health Initiative</title>
 <link rel="stylesheet" href="shared.css">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
@@ -138,31 +138,31 @@
       <div class="contact-info-box">
         <div class="section-tag">Get In Touch</div>
         <h2 class="section-title">We'd love<br>to hear<br>from you.</h2>
-        <p class="section-sub">Whether you're a potential partner, donor, researcher, or community member — our team is ready to connect.</p>
+        <p class="section-sub">Whether you're a potential partner, donor, researcher, or community member ï¿½ our team is ready to connect.</p>
 
         <div class="contact-item">
-          <div class="c-icon">??</div>
+          <div class="c-icon">&#128205;</div>
           <div>
             <div class="c-label">Address</div>
             <div class="c-value">Remera, Kigali, Rwanda</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="c-icon">??</div>
+          <div class="c-icon">&#9993;</div>
           <div>
             <div class="c-label">Email</div>
             <div class="c-value"><a href="mailto:info@rambahealth.org" style="color:var(--teal);text-decoration:none;">info@rambahealth.org</a></div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="c-icon">??</div>
+          <div class="c-icon">&#128222;</div>
           <div>
             <div class="c-label">Phone</div>
             <div class="c-value"><br>+250 786 354 394</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="c-icon">??</div>
+          <div class="c-icon">&#127760;</div>
           <div>
             <div class="c-label">Website</div>
             <div class="c-value"><a href="http://www.rambahealth.org">www.rambahealth.org</a></div>
@@ -173,11 +173,11 @@
           <div class="section-tag">Support Our Work</div>
           <h3>Make a Donation</h3>
           <p>Your contribution directly funds community health workers, digital tools, and evidence-based health programmes across Rwanda.</p>
-          <a href="#donate" class="btn-teal-light">Donate Now ?</a>
+          <a href="#donate" class="btn-teal-light">Donate Now &rarr;</a>
         </div>
 
         <div class="map-placeholder">
-          <span>???</span>
+          <span>&#128506;</span>
           <p>Kigali, Rwanda</p>
         </div>
       </div>
@@ -209,7 +209,7 @@
         <div class="form-group">
           <label>Subject / Inquiry Type</label>
           <select id="subject">
-            <option value="">— Select an inquiry type —</option>
+            <option value="">ï¿½ Select an inquiry type ï¿½</option>
             <option>Strategic Partnership</option>
             <option>Grant / Funding Inquiry</option>
             <option>Research Collaboration</option>
@@ -222,7 +222,7 @@
         <div class="form-group">
           <label>Programme Area of Interest</label>
           <select id="programme">
-            <option value="">— Select a programme area (optional) —</option>
+            <option value="">ï¿½ Select a programme area (optional) ï¿½</option>
             <option>Maternal & Child Health (MCH)</option>
             <option>Non-Communicable Diseases (NCDs)</option>
             <option>Health Outcomes</option>
@@ -233,11 +233,11 @@
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea id="user-message" placeholder="Tell us about your interest in RHI, your organisation, and how you'd like to engage…" required></textarea>
+          <textarea id="user-message" placeholder="Tell us about your interest in RHI, your organisation, and how you'd like to engageï¿½" required></textarea>
         </div>
         <div class="submit-row">
           <button id="submit-btn" class="btn-primary" type="submit">
-            Submit Message ?
+            Submit Message &rarr;
           </button>
           <p class="submit-note">We respect your privacy. Your information is never shared with third parties.</p>
         </div>
@@ -263,7 +263,7 @@
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var btn = document.getElementById('submit-btn');
-  btn.textContent = 'Sending…';
+  btn.textContent = 'Sendingï¿½';
   btn.disabled = true;
 
   var params = {
@@ -280,11 +280,16 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     emailjs.send('service_zwxnmyp', 'template_g2t7rlo', params),
     emailjs.send('service_zwxnmyp', 'template_83ooukf', params)
   ]).then(function() {
-    btn.textContent = 'Message Sent ?';
+    btn.textContent = 'Message Sent!';
     btn.style.background = '#2ecc71';
     document.getElementById('contact-form').reset();
+    setTimeout(function() {
+      btn.textContent = 'Submit Message â†’';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
   }, function(error) {
-    btn.textContent = 'Submit Message ?';
+    btn.textContent = 'Submit Message â†’';
     btn.disabled = false;
     alert('Failed to send message. Please try again.');
     console.error('EmailJS error:', error);
