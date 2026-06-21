@@ -266,15 +266,20 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
-  emailjs.send('service_8dswh7d', 'template_g2t7rlo', {
-    first_name:  document.getElementById('first-name').value,
-    last_name:   document.getElementById('last-name').value,
-    email:       document.getElementById('user-email').value,
+  var params = {
+    first_name:   document.getElementById('first-name').value,
+    last_name:    document.getElementById('last-name').value,
+    email:        document.getElementById('user-email').value,
     organisation: document.getElementById('organisation').value,
-    subject:     document.getElementById('subject').value,
-    programme:   document.getElementById('programme').value,
-    message:     document.getElementById('user-message').value
-  }).then(function() {
+    subject:      document.getElementById('subject').value,
+    programme:    document.getElementById('programme').value,
+    message:      document.getElementById('user-message').value
+  };
+
+  Promise.all([
+    emailjs.send('service_8dswh7d', 'template_g2t7rlo', params),
+    emailjs.send('service_8dswh7d', 'template_83ooukf', params)
+  ]).then(function() {
     btn.textContent = 'Message Sent ✓';
     btn.style.background = '#2ecc71';
     document.getElementById('contact-form').reset();
